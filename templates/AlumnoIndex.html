@@ -1,0 +1,23 @@
+
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+          No se pudo hacer el Registro! :(
+        </div>
+    {% endif %}
+    <h1> Registro de Alumno</h1>
+    <form action="{% url 'guardarAlumno' %}" method="POST">
+          {% csrf_token %}
+          {% if mensaje %}
+              <div class="alert alert-success" role="alert">
+                Registro Exitoso!
+              </div>
+          {% endif %}
+            {{ form|crispy }}
+
+          <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+{% endblock %}

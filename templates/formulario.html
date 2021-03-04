@@ -1,0 +1,42 @@
+
+    {% extends 'index.html' %}
+    {% block content %}
+
+      <center>
+        <form id="formulariojugador" method="post">
+            <h1 style="color:black;" >Registro Alumno </h1>
+
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                           <div class="col-md-3">
+                               <label for="exampleInputNom" style="color:black" >Nombre del Alumno: </label>
+                               <input style="border-radius: 35px 35px 35px 35px;" type="text" class="form-control" id="nombrejug" name="nombrejug" placeholder="Ingrese su Nombre">
+
+                           </div>
+                            <div class="col-md-3">
+                                <label for="exampleInputNom" style="color:black" >Edad del Jugador: </label>
+                                <input style="border-radius: 35px 35px 35px 35px;" type="text" class="form-control" id="edad" name="edad" placeholder="Ingrese su Edad">
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="exampleInputNom" style="color:black" >Categoria: </label>
+                                <select id="nomselec" name="nomselec"  style="border-radius: 35px 35px 35px 35px; " class="form-control"> </select>
+                            </div>
+                                <br>
+
+                                <div class="alert alert-success" id="exito" role="alert" style="display:none;">
+                                    Registro Guardado Exitosamente!
+                                </div>
+                                <div class="alert alert-danger" id="fallo" role="alert" style="display:none;">
+                                    El Registro Fallo!
+                                </div>
+
+
+                        </div>
+
+                    </div>
+
+
+        </form>
+      </center>
+    {% endblock %}
